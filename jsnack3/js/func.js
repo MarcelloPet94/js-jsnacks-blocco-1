@@ -21,7 +21,11 @@ odd.append(titleE);
 
 let arEvenOdd = [];
 let userSelectNumb = parseInt(prompt('Quanti numeri vuoi inserire?'));
+let verifyInputUser = userSelectNumb <= 1;
 
+// prende il numero dal prompt
+//saranno il numero di elementi presenti dentro all'array
+// cicla e push dentro all'array numeri casuali
 for(let a = 0; a < userSelectNumb; a++) 
 
 {
@@ -30,6 +34,7 @@ for(let a = 0; a < userSelectNumb; a++)
 }
 console.log(arEvenOdd);
 
+// legge e distingue i numeri dispari dai pari
 for(let count = 0; count < arEvenOdd.length ; count++)
 
 
@@ -37,14 +42,23 @@ for(let count = 0; count < arEvenOdd.length ; count++)
 
         if(arEvenOdd[count] % 2 == 0) {
 
+            if(verifyInputUser == true) {
+                odd.remove();
+            }
+
             let dinamicPar = document.createElement('p');
             let dinamicMess = document.createTextNode(arEvenOdd[count]);
             dinamicPar.appendChild(dinamicMess);
             equal.append(dinamicPar);
 
+
         }
         
         else {
+            if(verifyInputUser == true) {
+                equal.remove();
+            }
+            
             let dinamicPar = document.createElement('p');
             let dinamicMess = document.createTextNode(arEvenOdd[count]);
             dinamicPar.appendChild(dinamicMess);
