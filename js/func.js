@@ -28,21 +28,23 @@ Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
 Ogni volta che ne crei uno, stampalo a schermo.
 */
 
-let userArrayGen = parseInt(prompt("Numero di Array")) - 1;
+let userArrayGen = parseInt(prompt("Numero di Array"));
+let a = [];
 
-for (let i = 0; i <= userArrayGen; i++)
+for (let i = 0; i <= (userArrayGen - 1); i++)
 {
     for(let c = 0; c < 10; c++) 
-    {
-        
+    {   
         let randA = Math.floor(Math.random()*100 + 1);
-        let a = [];
         a.push(randA);
-        console.log(a);
         
     }
+    console.log(a);    
 
 }
+
+document.write("Stai stampando " + userArrayGen + " Array");
+
 
 /*
 let a = [];
