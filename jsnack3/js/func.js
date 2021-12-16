@@ -19,29 +19,37 @@ let titleM = document.createTextNode('ecco i dispari');
 titleE.appendChild(titleM);
 odd.append(titleE);
 
+let arEvenOdd = [];
+let userSelectNumb = parseInt(prompt('Quanti numeri vuoi inserire?'));
 
-let arEvenOdd = [23,12,78,47,15,24];
+for(let a = 0; a < userSelectNumb; a++) 
+
+{
+    let randA = Math.floor(Math.random()*100 + 1);
+    arEvenOdd.push(randA);
+}
 console.log(arEvenOdd);
 
 for(let count = 0; count < arEvenOdd.length ; count++)
 
-{
 
-    if(arEvenOdd[count] % 2 == 0) {
+    {
 
-        let dinamicPar = document.createElement('p');
-        let dinamicMess = document.createTextNode(arEvenOdd[count]);
-        dinamicPar.appendChild(dinamicMess);
-        equal.append(dinamicPar);
+        if(arEvenOdd[count] % 2 == 0) {
 
-    }
-    
-    else {
-        let dinamicPar = document.createElement('p');
-        let dinamicMess = document.createTextNode(arEvenOdd[count]);
-        dinamicPar.appendChild(dinamicMess);
-        odd.append(dinamicPar);
-    }
+            let dinamicPar = document.createElement('p');
+            let dinamicMess = document.createTextNode(arEvenOdd[count]);
+            dinamicPar.appendChild(dinamicMess);
+            equal.append(dinamicPar);
+
+        }
+        
+        else {
+            let dinamicPar = document.createElement('p');
+            let dinamicMess = document.createTextNode(arEvenOdd[count]);
+            dinamicPar.appendChild(dinamicMess);
+            odd.append(dinamicPar);
+        }
 
 }
 
