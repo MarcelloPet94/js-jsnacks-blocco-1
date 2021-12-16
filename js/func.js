@@ -32,6 +32,21 @@ let userArrayGen = parseInt(prompt("Numero di Array")) - 1;
 
 for (let i = 0; i <= userArrayGen; i++)
 {
-    let a = ['a','b','c'];
-    document.write(a + '<br>');
+    for(let c = 0; c < 10; c++) 
+    {
+        
+        let randA = Math.floor(Math.random()*100 + 1);
+        let a = [];
+        a.push(randA);
+        console.log(a);
+        
+    }
+
 }
+
+/*
+let a = [];
+a.push(1);
+a.push(2);
+console.log(a);
+*/
